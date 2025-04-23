@@ -49,6 +49,10 @@ body {
   margin-bottom: 10px;
 }
 
+.portfolio-home h1 span {
+  color: #007bff;
+}
+
 .portfolio-home p {
   font-size: 18px;
   color: #666;

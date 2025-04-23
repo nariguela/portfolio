@@ -5,7 +5,7 @@ const Home = () => {
     <section className="portfolio-home">
       <h1>
         Olá, eu sou <br />
-        Pedro Dias da Cunha
+        <span>Pedro</span> Dias da Cunha
       </h1>
       <p>
         Desenvolvedor Front-end apaixonado por criar experiências digitais
