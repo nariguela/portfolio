@@ -61,11 +61,11 @@ body {
 
 .portfolio-projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 20px;
   padding: 20px;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1450px;
   min-height: 88vh;
 }
 
@@ -75,16 +75,62 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.project-card:hover {
+  transform: scale(1.01);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-header button {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: #007bff;
+  color: white;
+}
+
+.project-header button a {
+  text-decoration: none;
+  color: white;
 }
 
 .project-card h2 {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .project-card p {
   color: #555;
+
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  height: 95px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: #1a1818 0px 0px 7px 0px;
+}
+
+.project-technologies {
+  font-size: 0.9rem;
 }
 
 .portfolio-contact {

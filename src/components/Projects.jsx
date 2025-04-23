@@ -2,53 +2,51 @@ import React from "react";
 
 const projects = [
   {
-    name: "Projeto 1",
-    description: "Descrição do projeto 1",
-    image: "link_para_imagem_1",
-    technologies: ["React", "Node.js"],
-    link: "link_para_projeto_1",
+    name: "Movie Rating usePopcorn",
+    description:
+      "Você pode buscar filmes, visualizar detalhes, adicionar à sua lista de assistidos e avaliar os filmes que já viu.",
+    image: "../../assets/usepopcorn.png",
+    technologies: ["React", "Git", "Javascript", "CSS", "API Fetch"],
+    link: "https://usepopcorn-nrg.netlify.app/",
   },
   {
-    name: "Projeto 2",
-    description: "Descrição do projeto 2",
-    image: "link_para_imagem_2",
-    technologies: ["React", "Node.js"],
-    link: "link_para_projeto_2",
+    name: "To-do List",
+    description:
+      "Uma lista de tarefas simples onde você pode adicionar, remover e marcar tarefas como concluídas.",
+    image: "../../assets/to-do-list.png",
+    technologies: ["React", "Git", "Javascript", "CSS"],
+    link: "https://to-do-list-nrg.netlify.app/",
   },
   {
-    name: "Projeto 3",
-    description: "Descrição do projeto 3",
-    image: "link_para_imagem_3",
-    technologies: ["React", "Node.js"],
-    link: "link_para_projeto_3",
+    name: "Travel List",
+    description:
+      "Uma checklist de coisas para levar em uma viagem. Você pode adicionar itens à lista e marcá-los como já concluídos.",
+    image: "../../assets/travel-list.png",
+    technologies: ["React", "Git", "Javascript", "CSS"],
+    link: "https://travel-list-nrg.netlify.app/",
   },
   {
-    name: "Projeto 4",
-    description: "Descrição do projeto 4",
-    image: "link_para_imagem_4",
-    technologies: ["React", "Node.js"],
-    link: "link_para_projeto_4",
+    name: "Eat 'N Split",
+    description:
+      "Um aplicativo para dividir contas de restaurantes entre amigos. Você pode adicionar amigos e indicar o total da conta e quem pagou.",
+    image: "../../assets/eat-n-split.png",
+    technologies: ["React", "Git", "Javascript", "CSS"],
+    link: "https://eat-n-split-nrg.netlify.app/",
   },
   {
-    name: "Projeto 5",
-    description: "Descrição do projeto 5",
-    image: "link_para_imagem_5",
-    technologies: ["React", "Node.js"],
-    link: "link_para_projeto_5",
+    name: "Rock Paper Scissors Game",
+    description:
+      "Um jogo simples de Pedra, Papel e Tesoura. Você pode jogar contra o computador e ver quem ganha.",
+    image: "../../assets/rock-paper-scissors-game.png",
+    technologies: ["Javascript", "CSS"],
+    link: "https://rock-paper-scissors-game-nrg.netlify.app/",
   },
   {
-    name: "Projeto 6",
-    description: "Descrição do projeto 6",
-    image: "link_para_imagem_6",
-    technologies: ["React", "Node.js"],
-    link: "link_para_projeto_6",
-  },
-  {
-    name: "Projeto 7",
-    description: "Descrição do projeto 7",
-    image: "link_para_imagem_7",
-    technologies: ["React", "Node.js"],
-    link: "link_para_projeto_7",
+    name: "Wave Memory Game",
+    description: "Um jogo de memória simples com temática de praia.",
+    image: "../../assets/wave-memory-game.png",
+    technologies: ["Javascript", "CSS"],
+    link: "https://wave-memory-game.netlify.app/",
   },
 ];
 
@@ -57,10 +55,22 @@ const Projects = () => {
     <section className="portfolio-projects">
       {projects.map((project) => (
         <div key={project.name} className="project-card">
-          <h2>{project.name}</h2>
-          <p>
-            Descrição breve do projeto {project.description}. Tecnologias
-            utilizadas, objetivos e resultados.
+          <div className="project-header">
+            <h2>{project.name}</h2>
+            <button>
+              <a href={project.link} target="_blank" rel="noreferrer">
+                Acessar
+              </a>
+            </button>
+          </div>
+          <p className="project-description">{project.description}</p>
+          <img
+            src={project.image}
+            alt={project.name}
+            className="project-image"
+          />
+          <p className="project-technologies">
+            Tecnologias: {project.technologies.join(", ")}
           </p>
         </div>
       ))}
