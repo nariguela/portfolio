@@ -19,7 +19,7 @@ const Home = () => {
           </p>
         </div>
         <div>
-          <img src="https://picsum.photos/500/300" alt="Portfolio" />
+          <img src="/assets/projects.png" alt="projects" />
         </div>
       </div>
       <div className="home-skills">
