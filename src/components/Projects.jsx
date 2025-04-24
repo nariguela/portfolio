@@ -6,7 +6,7 @@ const projects = [
     description:
       "Você pode buscar filmes, visualizar detalhes, adicionar à sua lista de assistidos e avaliar os filmes que já viu.",
     image: "../../assets/usepopcorn.png",
-    technologies: ["React", "Git", "Javascript", "CSS", "API Fetch"],
+    technologies: ["React", "Git", "Javascript", "CSS", "API REST"],
     link: "https://usepopcorn-nrg.netlify.app/",
   },
   {
