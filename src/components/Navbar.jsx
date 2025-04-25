@@ -14,13 +14,13 @@ export default function Navbar({ onPageChange, page }) {
         onClick={() => onPageChange("projects")}
         className={page === "projects" ? "active" : ""}
       >
-        Projects
+        Projetos
       </button>
       <button
         onClick={() => onPageChange("contact")}
         className={page === "contact" ? "active" : ""}
       >
-        Contact
+        Contato
       </button>
     </nav>
   );
