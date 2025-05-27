@@ -1,5 +1,7 @@
 import React from "react";
 
+import { GithubIcon } from "lucide-react";
+
 const projects = [
   {
     name: "Meu e-commerce",
@@ -8,6 +10,7 @@ const projects = [
     image: "../../assets/meu-ecommerce.png",
     technologies: ["React", "React Router", "Git", "Javascript", "CSS"],
     link: "https://meu-ecommerce-nrg.netlify.app/",
+    githubLink: "https://github.com/nariguela/meu-ecommerce-react",
   },
   {
     name: "Movie Rating usePopcorn",
@@ -16,6 +19,7 @@ const projects = [
     image: "../../assets/usepopcorn.png",
     technologies: ["React", "Git", "Javascript", "CSS", "API REST"],
     link: "https://usepopcorn-nrg.netlify.app/",
+    githubLink: "https://github.com/nariguela/usePopcorn",
   },
   {
     name: "To-do List",
@@ -24,6 +28,7 @@ const projects = [
     image: "../../assets/to-do-list.png",
     technologies: ["React", "Git", "Javascript", "CSS"],
     link: "https://to-do-list-nrg.netlify.app/",
+    githubLink: "https://github.com/nariguela/to-do-list",
   },
   {
     name: "Travel List",
@@ -32,6 +37,7 @@ const projects = [
     image: "../../assets/travel-list.png",
     technologies: ["React", "Git", "Javascript", "CSS"],
     link: "https://travel-list-nrg.netlify.app/",
+    githubLink: "https://github.com/nariguela/travel-list",
   },
   {
     name: "Eat 'N Split",
@@ -40,6 +46,7 @@ const projects = [
     image: "../../assets/eat-n-split.png",
     technologies: ["React", "Git", "Javascript", "CSS"],
     link: "https://eat-n-split-nrg.netlify.app/",
+    githubLink: "https://github.com/nariguela/eat-n-split",
   },
   {
     name: "Rock Paper Scissors Game",
@@ -48,6 +55,7 @@ const projects = [
     image: "../../assets/rock-paper-scissors-game.png",
     technologies: ["Javascript", "CSS"],
     link: "https://rock-paper-scissors-game-nrg.netlify.app/",
+    githubLink: "https://github.com/nariguela/rock-paper-scissors-game",
   },
   {
     name: "Wave Memory Game",
@@ -55,6 +63,7 @@ const projects = [
     image: "../../assets/wave-memory-game.png",
     technologies: ["Javascript", "CSS"],
     link: "https://wave-memory-game.netlify.app/",
+    githubLink: "https://github.com/nariguela/wave-memory-game",
   },
 ];
 
@@ -65,11 +74,21 @@ const Projects = () => {
         <div key={project.name} className="project-card">
           <div className="project-header">
             <h2>{project.name}</h2>
-            <button>
-              <a href={project.link} target="_blank" rel="noreferrer">
-                Acessar
+            <div>
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Github"
+              >
+                <GithubIcon />
               </a>
-            </button>
+              <button>
+                <a href={project.link} target="_blank" rel="noreferrer">
+                  Acessar
+                </a>
+              </button>
+            </div>
           </div>
           <p className="project-description">{project.description}</p>
           <img

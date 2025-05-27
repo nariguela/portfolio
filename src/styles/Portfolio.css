@@ -134,6 +134,10 @@
     margin-bottom: 15px;
   }
 
+  .project-header div > a {
+    margin-right: 15px;
+  }
+
   .project-header button {
     text-decoration: none;
     padding: 10px 20px;
@@ -337,6 +341,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+  }
+
+  .project-header div > a {
+    margin-right: 15px;
   }
 
   .project-header button {
@@ -544,6 +552,10 @@
     margin-bottom: 15px;
   }
 
+  .project-header div > a {
+    margin-right: 15px;
+  }
+
   .project-header button {
     text-decoration: none;
     padding: 10px 20px;
@@ -748,6 +760,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+  }
+
+  .project-header div > a {
+    margin-right: 15px;
   }
 
   .project-header button {
