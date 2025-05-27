@@ -2,6 +2,14 @@ import React from "react";
 
 const projects = [
   {
+    name: "Meu e-commerce",
+    description:
+      "Um e-commerce fictício onde você pode navegar por produtos e adicioná-los ao carrinho",
+    image: "../../assets/meu-ecommerce.png",
+    technologies: ["React", "React Router", "Git", "Javascript", "CSS"],
+    link: "https://meu-ecommerce-nrg.netlify.app/",
+  },
+  {
     name: "Movie Rating usePopcorn",
     description:
       "Você pode buscar filmes, visualizar detalhes, adicionar à sua lista de assistidos e avaliar os filmes que já viu.",
