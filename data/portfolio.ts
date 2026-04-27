@@ -11,7 +11,7 @@ export const profile = {
   intro:
     "Desenvolvedor front-end que ama tecnologia e está sempre explorando coisas novas.",
   welcome:
-    "Bem-vindo ao meu portfólio! Aqui você encontrará alguns projetos de estudos que desenvolvi.",
+    "Bem-vindo ao meu portfólio! Aqui você encontrará alguns projetos que desenvolvi.",
 }
 
 export const navigation = [

@@ -10,15 +10,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#101214",
-        graphite: "#171A1F",
-        cloud: "#F5F7FA",
-        muted: "#A7B0C0",
-        electric: "#3B82F6",
-        mint: "#34D399",
+        swiss: {
+          background: "#FFFFFF",
+          foreground: "#000000",
+          muted: "#F2F2F2",
+          accent: "#FF3000",
+          border: "#000000",
+        },
       },
-      boxShadow: {
-        glow: "0 24px 80px rgba(59, 130, 246, 0.18)",
+      fontFamily: {
+        sans: ["var(--font-inter)", "Inter", "Arial", "sans-serif"],
       },
     },
   },
