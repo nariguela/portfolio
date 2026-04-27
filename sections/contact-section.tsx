@@ -1,40 +1,36 @@
 import Link from "next/link";
-import { MotionDiv, MotionSection } from "@/components/motion";
+import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import { contactLinks, profile } from "@/data/portfolio";
 
 export function ContactSection() {
   return (
-    <MotionSection
+    <section
       id="contato"
-      className="section-shell"
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.6 }}
+      className="section-shell bg-white"
     >
-      <div className="grid gap-8 rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 backdrop-blur sm:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-10">
-        <SectionHeading
-          eyebrow="Contato"
-          title="Entre em contato"
-          description="Fique à vontade para me chamar por e-mail ou nas redes abaixo."
-        />
+      <div className="grid border-4 border-swiss-border lg:grid-cols-[5fr_7fr]">
+        <div className="swiss-diagonal border-b-4 border-swiss-border bg-swiss-muted p-6 sm:p-10 lg:border-b-0 lg:border-r-4">
+          <SectionHeading
+            number="03"
+            eyebrow="Contato"
+            title="Vamos conversar"
+            description="Fique à vontade para chamar por email ou abrir os perfis. O caminho principal está destacado em vermelho como sinal funcional."
+          />
+        </div>
 
-        <MotionDiv
-          className="flex flex-col justify-center gap-4"
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+        <div
+          className="flex flex-col justify-center gap-0 bg-white"
         >
           <Link
             href={`mailto:${profile.email}`}
-            className="rounded-2xl border border-white/10 bg-ink/50 p-5 text-base font-bold text-white transition hover:border-electric/60"
+            className="group flex min-h-28 items-center justify-between gap-6 border-b-2 border-swiss-border bg-swiss-accent p-6 text-lg font-black uppercase tracking-tight text-white transition hover:bg-swiss-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-swiss-accent focus-visible:ring-offset-2 sm:p-8 sm:text-2xl"
           >
-            E-mail: <span className="text-electric">{profile.email}</span>
+            <span className="break-all">{profile.email}</span>
+            <ArrowRight className="shrink-0 transition group-hover:translate-x-1" size={28} />
           </Link>
 
-          <div className="grid gap-3 sm:grid-cols-3">
+          <div className="grid sm:grid-cols-3">
             {contactLinks.map((link) => {
               const Icon = link.icon;
               const isEmail = link.href.startsWith("mailto:");
@@ -45,16 +41,19 @@ export function ContactSection() {
                   href={link.href}
                   target={isEmail ? undefined : "_blank"}
                   rel={isEmail ? undefined : "noreferrer"}
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-mint/70"
+                  className="group flex min-h-32 flex-col justify-between border-b-2 border-swiss-border p-6 font-black uppercase tracking-[0.18em] transition hover:bg-swiss-foreground hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-swiss-accent focus-visible:ring-offset-2 sm:border-b-0 sm:border-r-2 last:sm:border-r-0"
                 >
-                  <Icon size={18} />
-                  {link.label}
+                  <Icon
+                    className="text-swiss-accent transition group-hover:rotate-90 group-hover:text-white"
+                    size={24}
+                  />
+                  <span>{link.label}</span>
                 </Link>
               );
             })}
           </div>
-        </MotionDiv>
+        </div>
       </div>
-    </MotionSection>
+    </section>
   );
 }

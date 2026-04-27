@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
-import { Montserrat } from "next/font/google"
+import { Inter } from "next/font/google"
 import { siteUrl } from "@/data/site"
 import "./globals.css"
 
-const montserrat = Montserrat({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
 })
 
 export const metadata: Metadata = {
@@ -63,7 +64,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${montserrat.className} antialiased`}>{children}</body>
+      <body className={`${inter.variable} swiss-noise font-sans antialiased`}>
+        {children}
+      </body>
     </html>
   )
 }

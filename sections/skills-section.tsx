@@ -1,46 +1,51 @@
-import { CheckCircle2 } from "lucide-react";
-import { MotionArticle, MotionSection } from "@/components/motion";
-import { SectionHeading } from "@/components/section-heading";
-import { skillGroups } from "@/data/portfolio";
+import { CheckCircle2 } from "lucide-react"
+import { SectionHeading } from "@/components/section-heading"
+import { skillGroups } from "@/data/portfolio"
 
 export function SkillsSection() {
   return (
-    <MotionSection
+    <section
       id="skills"
-      className="section-shell"
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
+      className="section-shell border-b-2 border-swiss-border"
     >
-      <SectionHeading
-        eyebrow="Skills"
-        title="Tecnologias e fundamentos que uso nos estudos"
-        description="A base atual do portfólio foi organizada em grupos para deixar claro o que já faz parte da sua prática front-end."
-      />
+      <div className="grid gap-10 lg:grid-cols-[4fr_8fr]">
+        <SectionHeading
+          number="01"
+          eyebrow="Skills"
+          title="Tecnologias e fundamentos"
+          className="lg:sticky lg:top-28 lg:self-start"
+        />
 
-      <div className="mt-10 grid gap-5 md:grid-cols-3">
-        {skillGroups.map((group, index) => (
-          <MotionArticle
-            key={group.title}
-            className="rounded-3xl border border-white/10 bg-white/[0.045] p-6 backdrop-blur transition hover:border-electric/50 hover:bg-white/[0.065]"
-            initial={{ opacity: 0, y: 22 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: index * 0.08 }}
-          >
-            <h3 className="text-xl font-bold text-white">{group.title}</h3>
-            <ul className="mt-5 space-y-3">
-              {group.skills.map((skill) => (
-                <li key={skill} className="flex gap-3 text-sm leading-6 text-slate-300">
-                  <CheckCircle2 className="mt-0.5 shrink-0 text-mint" size={18} />
-                  <span>{skill}</span>
-                </li>
-              ))}
-            </ul>
-          </MotionArticle>
-        ))}
+        <div className="grid border-2 border-swiss-border md:grid-cols-2">
+          {skillGroups.map((group, index) => (
+            <article
+              key={group.title}
+              className="swiss-card group border-0 border-b-2 border-swiss-border p-6 hover:bg-swiss-accent hover:text-white md:border-r-2 [&:nth-child(even)]:md:border-r-0 last:border-b-0"
+            >
+              <p className="mb-10 text-xs font-black uppercase tracking-[0.24em] text-swiss-accent group-hover:text-white">
+                {(index + 1).toString().padStart(2, "0")}
+              </p>
+              <h3 className="text-2xl font-black uppercase leading-none tracking-tight">
+                {group.title}
+              </h3>
+              <ul className="mt-6 space-y-3">
+                {group.skills.map((skill) => (
+                  <li
+                    key={skill}
+                    className="flex gap-3 text-sm font-bold leading-6"
+                  >
+                    <CheckCircle2
+                      className="mt-0.5 shrink-0 text-swiss-accent group-hover:text-white"
+                      size={18}
+                    />
+                    <span>{skill}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
       </div>
-    </MotionSection>
-  );
+    </section>
+  )
 }
