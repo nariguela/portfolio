@@ -1,39 +1,37 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { SectionHeading } from "@/components/section-heading";
-import { contactLinks, profile } from "@/data/portfolio";
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { SectionHeading } from "@/components/section-heading"
+import { contactLinks, profile } from "@/data/portfolio"
 
 export function ContactSection() {
   return (
-    <section
-      id="contato"
-      className="section-shell bg-white"
-    >
+    <section id="contato" className="section-shell bg-white">
       <div className="grid border-4 border-swiss-border lg:grid-cols-[5fr_7fr]">
         <div className="swiss-diagonal border-b-4 border-swiss-border bg-swiss-muted p-6 sm:p-10 lg:border-b-0 lg:border-r-4">
           <SectionHeading
             number="03"
             eyebrow="Contato"
             title="Vamos conversar"
-            description="Fique à vontade para chamar por email ou abrir os perfis. O caminho principal está destacado em vermelho como sinal funcional."
+            description="Fique à vontade para chamar por email ou abrir os perfis."
           />
         </div>
 
-        <div
-          className="flex flex-col justify-center gap-0 bg-white"
-        >
+        <div className="flex flex-col justify-center gap-0 bg-white">
           <Link
             href={`mailto:${profile.email}`}
             className="group flex min-h-28 items-center justify-between gap-6 border-b-2 border-swiss-border bg-swiss-accent p-6 text-lg font-black uppercase tracking-tight text-white transition hover:bg-swiss-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-swiss-accent focus-visible:ring-offset-2 sm:p-8 sm:text-2xl"
           >
             <span className="break-all">{profile.email}</span>
-            <ArrowRight className="shrink-0 transition group-hover:translate-x-1" size={28} />
+            <ArrowRight
+              className="shrink-0 transition group-hover:translate-x-1"
+              size={28}
+            />
           </Link>
 
           <div className="grid sm:grid-cols-3">
             {contactLinks.map((link) => {
-              const Icon = link.icon;
-              const isEmail = link.href.startsWith("mailto:");
+              const Icon = link.icon
+              const isEmail = link.href.startsWith("mailto:")
 
               return (
                 <Link
@@ -49,11 +47,11 @@ export function ContactSection() {
                   />
                   <span>{link.label}</span>
                 </Link>
-              );
+              )
             })}
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
