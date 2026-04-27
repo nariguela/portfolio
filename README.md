@@ -40,7 +40,3 @@ Acesse `http://localhost:3000`.
 - `sections/`: seções principais da landing page.
 - `data/`: conteúdo do portfólio.
 - `public/assets/`: imagens usadas no site.
-
-## Personalização
-
-Atualize textos, links, skills e projetos em `data/portfolio.ts`. Quando definir a URL final de deploy, configure `NEXT_PUBLIC_SITE_URL` para melhorar sitemap, robots e Open Graph.
