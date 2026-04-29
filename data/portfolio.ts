@@ -41,70 +41,88 @@ export const highlights = [
 
 export const skillGroups = [
   {
-    title: "Frontend Engineering",
+    title: "Core Frontend",
     skills: [
       "React",
-      "Next.js",
+      "Next.js (App Router, SSR, SSG)",
       "JavaScript (ES6+)",
-      "TypeScript",
-      "HTML5",
-      "CSS3",
+      "TypeScript (tipagem avançada)",
+      "Arquitetura SPA/SSR híbrida",
+    ],
+  },
+  {
+    title: "Ecossistema React",
+    skills: [
+      "React Hook Form",
+      "Zod (validação e parsing)",
+      "TanStack Query (server-state management)",
+      "Context API (client-state) & Redux",
+      "Custom Hooks & composição de lógica",
+    ],
+  },
+  {
+    title: "Engenharia de UI",
+    skills: [
       "Tailwind CSS",
+      "Design Systems (tokens, escalabilidade)",
+      "Radix UI / Headless UI",
+      "Componentização orientada a domínio",
+      "Acessibilidade (ARIA, semantics)",
     ],
   },
   {
-    title: "Web & Mobile",
+    title: "Web & Mobile Experience",
     skills: [
-      "Desenvolvimento Web Responsivo",
-      "Mobile First Design",
-      "Ionic & Capacitor",
+      "Responsive Design",
+      "Mobile First",
+      "Ionic + Capacitor",
+      "Integração Web ↔ Mobile",
     ],
   },
   {
-    title: "State Management & Data Fetching",
+    title: "Data Fetching & API Layer",
     skills: [
-      "React Hooks (useState, useEffect, useMemo, useCallback)",
-      "Context API",
-      "TanStack Query (React Query)",
-      "Gerenciamento de estado server/client",
+      "Axios / Fetch API",
       "Consumo de APIs REST",
+      "Cache, revalidação e sincronização de dados",
+      "Error handling & loading states",
     ],
   },
   {
-    title: "UI, UX & Styling",
-    skills: ["Tailwind CSS", "Design Systems", "Componentização escalável"],
-  },
-  {
-    title: "Arquitetura & Boas Práticas",
+    title: "Arquitetura & Padrões",
     skills: [
       "Clean Code",
-      "Component-Driven Development",
       "Separation of Concerns",
-      "Padronização com ESLint e Prettier",
-      "Versionamento semântico",
-    ],
-  },
-  {
-    title: "Ferramentas & Ecossistema",
-    skills: [
-      "Git & GitHub",
-      "Node.js",
-      "NPM",
-      "Vite / Webpack",
-      "Axios / Fetch API",
+      "Component-Driven Development",
+      "Feature-based architecture",
+      "Escalabilidade de front-end",
     ],
   },
   {
     title: "Performance & SEO",
     skills: [
-      "Otimização de performance",
       "Code Splitting",
-      "SEO técnico (Next.js)",
+      "Lazy Loading",
+      "Otimização de render (memoization)",
+      "SEO técnico com Next.js",
     ],
+  },
+  {
+    title: "Tooling & Workflow",
+    skills: ["Git & GitHub", "Node.js", "NPM", "Vite", "ESLint + Prettier"],
   },
 ]
 
 export const projects = [
+  {
+    name: "Grimório D&D 5e",
+    description:
+      "Uma lista de magias para usar em jogos de RPG Dungeons & Dragons",
+    image: "/assets/magias-5e.png",
+    technologies: ["React", "React Router", "Git", "JavaScript", "Tailwind"],
+    link: "https://magias5e.netlify.app/",
+    githubLink: "https://github.com/nariguela/spells-list",
+  },
   {
     name: "Meu e-commerce",
     description:
@@ -150,23 +168,23 @@ export const projects = [
     link: "https://eat-n-split-nrg.netlify.app/",
     githubLink: "https://github.com/nariguela/eat-n-split",
   },
-  {
-    name: "Rock Paper Scissors Game",
-    description:
-      "Um jogo simples de Pedra, Papel e Tesoura. Você pode jogar contra o computador e ver quem ganha.",
-    image: "/assets/rock-paper-scissors-game.png",
-    technologies: ["JavaScript", "CSS"],
-    link: "https://rock-paper-scissors-game-nrg.netlify.app/",
-    githubLink: "https://github.com/nariguela/rock-paper-scissors-game",
-  },
-  {
-    name: "Wave Memory Game",
-    description: "Um jogo de memória simples com temática de praia.",
-    image: "/assets/wave-memory-game.png",
-    technologies: ["JavaScript", "CSS"],
-    link: "https://wave-memory-game.netlify.app/",
-    githubLink: "https://github.com/nariguela/wave-memory-game",
-  },
+  // {
+  //   name: "Rock Paper Scissors Game",
+  //   description:
+  //     "Um jogo simples de Pedra, Papel e Tesoura. Você pode jogar contra o computador e ver quem ganha.",
+  //   image: "/assets/rock-paper-scissors-game.png",
+  //   technologies: ["JavaScript", "CSS"],
+  //   link: "https://rock-paper-scissors-game-nrg.netlify.app/",
+  //   githubLink: "https://github.com/nariguela/rock-paper-scissors-game",
+  // },
+  // {
+  //   name: "Wave Memory Game",
+  //   description: "Um jogo de memória simples com temática de praia.",
+  //   image: "/assets/wave-memory-game.png",
+  //   technologies: ["JavaScript", "CSS"],
+  //   link: "https://wave-memory-game.netlify.app/",
+  //   githubLink: "https://github.com/nariguela/wave-memory-game",
+  // },
 ]
 
 export const contactLinks = [
