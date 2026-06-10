@@ -124,6 +124,22 @@ export const projects = [
     githubLink: "https://github.com/nariguela/spells-list",
   },
   {
+    name: "Worldwise",
+    description:
+      "Um app para você registrar suas viagens e lugares visitados. Com interação no mapa e uma fake API.",
+    image: "/assets/worldwise.png",
+    technologies: [
+      "React",
+      "React Router",
+      "Git",
+      "JavaScript",
+      "Libs terceiras",
+      "API",
+    ],
+    link: "https://worldwise-nrg.netlify.app/",
+    githubLink: "https://github.com/nariguela/worldwise",
+  },
+  {
     name: "Meu e-commerce",
     description:
       "Um e-commerce fictício onde você pode navegar por produtos e adicioná-los ao carrinho.",
